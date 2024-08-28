@@ -11,18 +11,15 @@ public class DinnerConstructor {
 
     void addNewDish(String dishType, String dishName) {
         if (checkType(dishType)) {
-           foodList.get(dishType).add(dishName);
-            System.out.println(foodList);
+            foodList.get(dishType).add(dishName);
         } else {
             ArrayList<String> dishes = new ArrayList<>(10);
             dishes.add(dishName);
             foodList.put(dishType, dishes);
-            System.out.println(foodList);
         }
     }
 
     void generateDishCombo(int numberOfCombos, ArrayList<String> types) {
-        System.out.println(foodList);
         for (int i = 0; i < numberOfCombos; i++) {
             ArrayList<String> combos = new ArrayList<>();
             System.out.println("Комбо " + (i + 1));
